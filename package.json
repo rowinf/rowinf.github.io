@@ -18,7 +18,7 @@
     "build:11ty": "eleventy",
     "watch:11ty": "eleventy --serve",
     "build": "npm run build:stylus && npm run build:11ty",
-	"serve": "eleventy",
+	"serve": "eleventy --serve",
     "dev": "concurrently -n stylus,11ty \"npm run watch:stylus\" \"npm run watch:11ty\""
   }
 }

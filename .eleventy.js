@@ -8,7 +8,7 @@ module.exports = (config) => {
 
   config.addPassthroughCopy('css');
   config.addPassthroughCopy('static');
-  
+
   config.setDataDeepMerge(true);
 
   config.addFilter('htmlDateString', (dateObj) => {

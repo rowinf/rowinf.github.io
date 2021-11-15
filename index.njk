@@ -4,10 +4,9 @@ eleventyComputed:
 layout: layouts/base.njk
 permalink: /{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}
 pagination:
-  data: collections.post
+  data: repos
   size: 6
-  alias: posts
-  reverse: true
+  alias: repos
 eleventyNavigation:
   key: Home
   weight: 0
@@ -33,7 +32,7 @@ eleventyNavigation:
   </div>
 
   <h2 class="section-title">
-    Latest Posts
+  Repos
     {%- if pagination.pageNumber != 0 %} - Page {{ pagination.pageNumber + 1 }}{% endif %}
   </h2>
   {% include "components/postslist.njk" %}

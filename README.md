@@ -12,7 +12,6 @@ A theme repository that contains a blog built with [Eleventy](https://github.com
  - Tags as taxonomy
  - Stylus CSS preprocessor
  - Integrated with Eleventy's official [navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)
- - Also generates Atom RSS Feed with Eleventy's official [RSS plugin](https://www.11ty.dev/docs/plugins/rss/)
  - Sitemap generation
  - Non-post pages support (eg. About page, Contact page)
  - Modular type scale implemented in with Stylus

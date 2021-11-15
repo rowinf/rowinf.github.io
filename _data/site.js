@@ -3,13 +3,13 @@ module.exports = {
     title: "My Github Portfolio",
     description: "My Github projects",
     lang: "en",
-    siteUrl: "https://example.com/",
+    siteUrl: "https://rowinf.github.io/gh-portfolio/",
   },
   feed: { // used in feed.xml.njk
     subtitle: "My Github projects",
     filename: "atom.xml",
     path: "/atom.xml",
-    id: "https://example.com/",
+    id: "https://rowinf.github.io/gh-portfolio",
     authorName: "Rob Irwin",
     authorEmail: "robert.irwin@outlook.co.nz"
   },

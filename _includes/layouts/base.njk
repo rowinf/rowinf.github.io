@@ -31,10 +31,10 @@
     }
 
     if (
-      localStorage.prefsDark === 'true' || 
+      localStorage.prefsDark === 'true' ||
       (
-        window.matchMedia && 
-        window.matchMedia('(prefers-color-scheme: dark)').matches && 
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches &&
         localStorage.prefsDark !== 'false')
       ) {
       document.body.classList.add('dark')

@@ -1,6 +1,6 @@
 module.exports = {
   meta: {
-    title: "My Github Portfolio",
+    title: "My Github Portfolio!",
     description: "My Github projects",
     lang: "en",
     siteUrl: "https://rowinf.github.io/gh-portfolio/",

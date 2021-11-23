@@ -6,7 +6,6 @@ module.exports = (config) => {
   config.addPlugin(navigationPlugin);
   config.addPlugin(rssPlugin);
 
-  config.addPassthroughCopy('css');
   config.addPassthroughCopy('static');
 
   config.setDataDeepMerge(true);

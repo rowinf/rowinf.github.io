@@ -9,11 +9,10 @@
   <link rel="shortcut icon" href="{{ '/static/img/favicon.ico' | url }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ '/_assets/css/main.css' | url }}" media="all">
   <link rel="stylesheet" href="{{ '/_assets/parcel.css' | url }}" media="all">
-
+  <script src="/_assets/parcel.js" />
 </head>
 <body>
   {% include 'components/navbar.njk' %}
-	<div class="max-w-sm p-3 m-4 rounded-3 shadow">Testing bootstrap</div>
   {{ content | safe }}
   {% include 'components/footer.njk' %}
   <script>

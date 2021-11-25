@@ -10,6 +10,10 @@ module.exports = (config) => {
 
   config.setDataDeepMerge(true);
 
+  config.addFilter('asDate', (str) => {
+    return new Date(str)
+  })
+
   config.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });

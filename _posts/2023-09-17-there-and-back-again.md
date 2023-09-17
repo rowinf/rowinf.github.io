@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "There and back again (2020)"
+title: "There and back again"
 date:   2023-09-17 12:46:44 +1200
 ---
 

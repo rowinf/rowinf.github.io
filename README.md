@@ -1,2 +1,5 @@
-# Eleventy + Stylus Blog theme
-forked from [ar363/eleventy-stylus-blog-theme](https://github.com/ar363/eleventy-stylus-blog-theme)
+# Developer Home Page
+
+This is the developer home page for github user rowinf.
+
+Built with jekyll pages.

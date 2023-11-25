@@ -6,4 +6,3 @@ layout: home
 ---
  
 Hi, my name is Rob. Have a look at some of the extra projects I've worked on.
- 

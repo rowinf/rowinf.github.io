@@ -1,0 +1,5 @@
+baseURL: https://rowinf.github.io
+disablePathToLower: true
+languageCode: en-us
+title: Robert Irwin | Portfolio
+theme: ananke

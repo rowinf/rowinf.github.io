@@ -4,3 +4,6 @@
 [submodule "gohugo-theme-ananke"]
 	path = gohugo-theme-ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git

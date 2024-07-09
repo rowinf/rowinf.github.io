@@ -7,6 +7,6 @@ This is a contest entry to Stats NZ for data visualisation of transport commuter
 
 The project was part of a larger government program of "mode shift" to encourage people to use alternative modes of transport. I won honorable mention for the parallel axis chart that revealed an important insight in the commuter data. The chart revealed where alternative modes of transport were being used the most.
 
-[[repository]](https://github.com/rowinf/there-and-back-again)
-[[website]](https://rowinf.github.io/there-and-back-again/)
-[[announcement]](https://www.stats.govt.nz/news/winner-announced-for-2018-census-commuter-data-visualisation-competition)
+[repository](https://github.com/rowinf/there-and-back-again)
+[website](https://rowinf.github.io/there-and-back-again/)
+[announcement](https://www.stats.govt.nz/news/winner-announced-for-2018-census-commuter-data-visualisation-competition)

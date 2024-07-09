@@ -7,5 +7,5 @@ This is a presentation I gave to a local meetup group about the "death" of singl
 
 In this presentation, I discussed the challenges of single page apps, and how the front end development culture has changed in the 10 years I've been working in this space. I also shared my thoughts on the future of web development, and how HTMX can give us many of the benefits of SPAs while being much simpler to build with.
 
-[[repository]](https://github.com/rowinf/htmx-slides)
-[[slides]](https://rowinf.github.io/htmx-slides/)
+[repository](https://github.com/rowinf/htmx-slides)
+[slides](https://rowinf.github.io/htmx-slides/)

@@ -1,5 +1,6 @@
 baseURL: https://rowinf.github.io
 disablePathToLower: true
 languageCode: en-us
-title: Robert Irwin > Portfolio
-theme: ananke
+title: Robert Irwin
+description: The humblest developer in the world, you wouldn't believe how humble
+theme: PaperMod

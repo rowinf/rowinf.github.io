@@ -1,6 +1,7 @@
 ---
 date: "2024-07-23T01:30:00Z"
-title: Are frameworks evil?
+title: How should we think about frameworks?
+draft: true
 ---
 
 Over the past decade and beyond, web frameworks have dominated the discussion around web development trends. With any luck, this trend is nearing its end. While frameworks can simplify web development and promote best practices, they also introduce significant challenges. Are they _merely_ troublesome, or should we go a step further and say that some are actually evil?

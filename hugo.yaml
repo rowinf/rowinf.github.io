@@ -4,3 +4,23 @@ languageCode: en-us
 title: Robert Irwin
 description: The humblest developer in the world, you wouldn't believe how humble
 theme: PaperMod
+params:
+  profileMode:
+    enabled: true
+    title: "Robert Irwin"
+    subtitle: "When you believe in yourself you can do anything"
+    imageUrl: "eagle-402x402.jpg"
+    imageTitle: "bald eagle crying"
+    imageWidth: 201
+    imageHeight: 201
+    buttons:
+      - name: Posts
+        url: "/posts"
+      - name: Github
+        url: "https://github.com/rowinf"
+
+  socialIcons:
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/robert-irwin-23019730/"
+    - name: "X"
+      url: "https://x.com/Irwinian"

@@ -3,12 +3,13 @@ disablePathToLower: true
 theme: PaperMod
 title: Robert Irwin
 params:
+  defaultTheme: auto
   languageCode: en-us
-  description: The humblest developer in the world, you wouldn't believe how humble
+  description: The web developer that will keep you out of trouble and your head on your shoulders
   profileMode:
     enabled: true
-    title: "Grug-brain Web developer"
-    subtitle: "JavaScript frameworks make America sad."
+    title: "Web Developer"
+    subtitle: "We already tried complex, why not try simple?"
     imageUrl: "eagle-402x402.jpg"
     imageTitle: "bald eagle crying"
     imageWidth: 201

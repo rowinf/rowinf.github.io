@@ -1,0 +1,10 @@
+
+body {
+    --code-bg: rgb(244, 244, 244);
+    --primary: rgb(0, 15, 62);
+}
+
+.dark {
+    --theme: rgb(20, 19, 19);
+    --primary: #ccf1ff;
+}

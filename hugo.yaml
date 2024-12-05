@@ -3,13 +3,15 @@ disablePathToLower: true
 theme: PaperMod
 title: Robert Irwin
 params:
+  assets:
+    favicon: favicon.ico
   defaultTheme: auto
   languageCode: en-us
   description: The web developer that will keep you out of trouble and your head on your shoulders
   profileMode:
     enabled: true
-    title: "Web Developer"
-    subtitle: "We already tried complex, why not try simple? America wants you to succeed."
+    title: "Frontier Web Developer"
+    subtitle: "Slow is smooth and smooth is fast. We already tried complex, why not try simple?"
     imageUrl: "eagle-402x402.jpg"
     imageTitle: "bald eagle crying"
     imageWidth: 201

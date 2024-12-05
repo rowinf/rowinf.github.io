@@ -1,5 +1,7 @@
 
-body {
+:root {
+    --heading-font: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    --body-font: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
     --code-bg: rgb(244, 244, 244);
     --primary: rgb(0, 15, 62);
 }
@@ -7,4 +9,12 @@ body {
 .dark {
     --theme: rgb(20, 19, 19);
     --primary: #ccf1ff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--body-font);
 }

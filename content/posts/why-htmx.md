@@ -4,13 +4,13 @@ draft = false
 title = 'Why Htmx'
 +++
 
-I was asked why I like htmx as a JavaScript library. I like it because it is simple. The killer features are as follows: 
+I was asked why I like htmx as a JavaScript library. I like it because it is simple. The killer features are as follows.
 
-## Zero Dependencies
-Being backend agnostic, the advantages here is that you can learn it once and reuse it in other projects. Since it doesn't release breaking changes, there are no costly upgrades
+## Stability
+The htmx project is older than it looks. It's a rewrite of another library, so the author has worked out many of the issues before creating htmx. The other source of its stability is that it has zero dependencies. The source code is in one file, you can just [go read it](https://github.com/bigskysoftware/htmx/blob/master/src/htmx.js).
 
 ## Adheres to Standards
-As it follows the specs in REST and HTTP specs, it encourages you to learn the specs. This raises your developer chops, increasing your knowledge of how the web works.
+As it follows the specs in REST and HTTP specs, it encourages you to learn the specs. This raises your developer chops, increasing your knowledge of how the web works. Since it adheres to standards, it is backend agnostic, making it useful across projects.
 
 ## Incrementally Adoptable
 Single page applications tended to be all-or-nothing. If you thought you could just embed a React app as an island in a working application, that app tends to grow and take over the whole thing. With htmx, less is more. You can use as much or as little of it as you want. 

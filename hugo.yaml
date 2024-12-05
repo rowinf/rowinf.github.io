@@ -9,7 +9,7 @@ params:
   profileMode:
     enabled: true
     title: "Web Developer"
-    subtitle: "We already tried complex, why not try simple?"
+    subtitle: "We already tried complex, why not try simple? America wants you to succeed."
     imageUrl: "eagle-402x402.jpg"
     imageTitle: "bald eagle crying"
     imageWidth: 201

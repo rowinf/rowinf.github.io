@@ -12,8 +12,8 @@ params:
     enabled: true
     title: "Frontier Web Developer"
     subtitle: "Slow is smooth and smooth is fast. We already tried complex, why not try simple?"
-    imageUrl: "eagle-402x402.jpg"
-    imageTitle: "bald eagle crying"
+    imageUrl: "profile.jpg"
+    imageTitle: "my face"
     imageWidth: 201
     imageHeight: 201
     buttons:

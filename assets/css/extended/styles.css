@@ -3,6 +3,7 @@
     --body-font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     --code-bg: rgb(244, 244, 244);
     --primary: rgb(0, 15, 62);
+    --gap: 0.9rem;
 }
 
 .dark {

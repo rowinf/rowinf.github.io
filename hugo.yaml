@@ -2,6 +2,12 @@ baseURL: https://rowinf.github.io
 disablePathToLower: true
 theme: PaperMod
 title: Robert Irwin
+menus:
+  main:
+    - name: Minis
+      url: "/minis/"
+    - name: Archives
+      url: "/archives/"
 params:
   assets:
     favicon: favicon.ico
@@ -17,8 +23,8 @@ params:
     imageWidth: 201
     imageHeight: 201
     buttons:
-      - name: Posts
-        url: "/posts"
+      - name: Archives
+        url: "/archives/"
       - name: Github
         url: "https://github.com/rowinf"
 

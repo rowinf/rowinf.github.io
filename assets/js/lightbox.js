@@ -2,9 +2,13 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
 
 const lightbox = new PhotoSwipeLightbox({
-    gallery: '.post-content figure',
+    gallery: '.gallery-image',
     children: 'a',
     pswpModule: PhotoSwipe,
-    initialZoomLevel: 'fit'
+    initialZoomLevel: 1,
+    secondaryZoomLevel: 1.5,
+    maxZoomLevel: 2,
+    showHideAnimationType: 'zoom',
+    mainClass: 'pswp-with-perma-preloader'
 });
 lightbox.init();

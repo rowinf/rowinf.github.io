@@ -1,4 +1,3 @@
-
 :root {
     --body-font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     --code-bg: rgb(244, 244, 244);
@@ -11,7 +10,15 @@
     --primary: #ccf1ff;
 }
 
-body, h1, h2, h3, h4, h5, h6, a, p {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
     font-family: var(--body-font);
 }
 
@@ -19,9 +26,31 @@ body, h1, h2, h3, h4, h5, h6, a, p {
     background-color: var(--tertiary);
 }
 
-.post-content figure {
-    display: grid;
-    grid-template-columns: max(300px,47%) max(200px,25%);
-    justify-content: space-evenly;
-    direction: rtl;
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--gap);
+    figcaption {
+        flex: 0.5 300px;
+    }
+
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+figure:nth-of-type(2n) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.pswp img {
+    max-width: none;
+    object-fit: contain;
+}
+
+.pswp--custom-bg {
+    --pswp-bg: #7079bf;
 }

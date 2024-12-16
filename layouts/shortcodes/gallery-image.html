@@ -1,0 +1,19 @@
+<div class="gallery-image">
+<a href="{{ .Get "link" }}" target="_blank">
+<img src="{{ .Get "src" }}"
+{{- if or (.Get "alt") (.Get "caption") }}
+alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+{{- end -}}
+{{- with .Get "width" }} width="{{ . }}"{{ end -}}
+{{- with .Get "height" }} height="{{ . }}"{{ end -}}
+{{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+{{- with .Get "data-pswp-width" }} data-pswp-width="{{ . }}"{{ end -}}
+{{- with .Get "data-pswp-height" }} data-pswp-height="{{ . }}"{{ end -}}
+><!-- Closing img tag -->
+</a>
+<div>
+<h4>
+    {{ .Get "title" }}
+</h4>
+</div>
+</div>

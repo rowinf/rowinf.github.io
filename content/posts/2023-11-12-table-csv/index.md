@@ -2,7 +2,6 @@
 date: "2023-11-12T21:30:00Z"
 draft: false
 title: "Convert a HTML table to CSV via command line"
-extraScript: js/table.js
 ---
 
 Say we're down about the lack of sunshine in our city and we really want to know what the sunniest cities in the world are. The data we're looking at is the Wikipedia article titled [List of cities by sunshine duration](https://en.wikipedia.org/wiki/List_of_cities_by_sunshine_duration). 

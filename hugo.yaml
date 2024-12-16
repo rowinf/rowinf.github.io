@@ -9,6 +9,8 @@ menus:
     - name: Archives
       url: "/archives/"
 params:
+  footer:
+    text: Slow is smooth, smooth is fast
   assets:
     favicon: favicon.ico
   defaultTheme: auto

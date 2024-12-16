@@ -1,4 +1,11 @@
+
+{{- with .Params.gallery -}}
+    {{ with resources.Get "js/lightbox.js" | js.Build (dict "minify" false) }}
+        <script src="{{ .RelPermalink }}" type="module"></script>
+    {{ end }}
+{{- end -}}
+
 {{- with .Params.pageScript -}}
     {{- $js2 := resources.Get . | js.Build (dict "minify" false) -}}
-    <script src="{{ $js2.RelPermalink }}"></script>
+    <script src="{{ $js2.RelPermalink }}" defer></script>
 {{- end -}}

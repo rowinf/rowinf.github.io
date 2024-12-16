@@ -1,0 +1,14 @@
+{
+  "name": "rowinf.github.io",
+  "version": "1.0.0",
+  "description": "https://rowinf.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rowinf",
+  "license": "MIT",
+  "dependencies": {
+    "photoswipe": "^5.4.4"
+  }
+}

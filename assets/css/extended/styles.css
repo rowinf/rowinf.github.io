@@ -18,3 +18,10 @@ body, h1, h2, h3, h4, h5, h6, a, p {
 .post-entry:has(a:hover) {
     background-color: var(--tertiary);
 }
+
+.post-content figure {
+    display: grid;
+    grid-template-columns: max(300px,47%) max(200px,25%);
+    justify-content: space-evenly;
+    direction: rtl;
+}

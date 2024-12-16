@@ -8,7 +8,6 @@ const lightbox = new PhotoSwipeLightbox({
     initialZoomLevel: 1,
     secondaryZoomLevel: 1.5,
     maxZoomLevel: 2,
-    showHideAnimationType: 'zoom',
-    mainClass: 'pswp-with-perma-preloader'
+    showHideAnimationType: 'zoom'
 });
 lightbox.init();

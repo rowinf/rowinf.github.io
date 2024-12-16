@@ -1,0 +1,4 @@
+{{- with .Params.pageScript -}}
+    {{- $js2 := resources.Get . | js.Build (dict "minify" false) -}}
+    <script src="{{ $js2.RelPermalink }}"></script>
+{{- end -}}

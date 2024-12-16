@@ -2,6 +2,7 @@
 date: "2023-11-12T21:30:00Z"
 draft: false
 title: "Convert a HTML table to CSV via command line"
+extraScript: js/table.js
 ---
 
 Say we're down about the lack of sunshine in our city and we really want to know what the sunniest cities in the world are. The data we're looking at is the Wikipedia article titled [List of cities by sunshine duration](https://en.wikipedia.org/wiki/List_of_cities_by_sunshine_duration). 
@@ -57,7 +58,9 @@ final commands here:
 curl https://en.wikipedia.org/wiki/List_of_cities_by_sunshine_duration |
 pup '.wikitable:nth-of-type(4) tr > :not(:last-child) text{}' |
 grep -v '^$' |
-awk -f script.awk > test.csv
+awk -f row-text-to-csv.awk > test.csv
 ```
 
-Wow! that turned into more work than I expected. Surely there's an easier way to do this! Next time.
+Wow! that turned into more work than I expected. Surely there's an easier way to do this! Next time. Here's the data:
+
+{{< csv-to-table "List_of_cities_by_sunshine_duration.csv" >}}

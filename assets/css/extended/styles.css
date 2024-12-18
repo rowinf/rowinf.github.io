@@ -4,11 +4,13 @@
     --primary: rgb(0, 15, 62);
     --gap: 0.9rem;
     --theme: rgb(232, 232, 244);
+    --subdued: #90aeba;
 }
 
 .dark {
     --theme: rgb(20, 19, 19);
     --primary: #ccf1ff;
+    --subdued: #64757c;
 }
 
 body,
@@ -54,4 +56,13 @@ figure:nth-of-type(2n) {
 
 .pswp--custom-bg {
     --pswp-bg: #7079bf;
+}
+
+gold-maker {
+    width: 300px;
+    display: block;
+}
+
+gold-maker > * {
+    width: 300px;
 }

@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit';
+import { html, LitElement, css } from 'lit';
 import { SignalWatcher, watch, signal } from '@lit-labs/signals';
 
 const count = signal(0);
@@ -6,7 +6,7 @@ const count = signal(0);
 class CountIncrementer extends SignalWatcher(LitElement) {
   render() {
     return html`
-      <button @click=${this.increment}>Increment: ${watch(count)}</button>
+      <button @click=${this.increment}>Go out and make money: ${watch(count)}</button>
     `;
   }
   increment() {
@@ -15,6 +15,18 @@ class CountIncrementer extends SignalWatcher(LitElement) {
 }
 
 class GoldMaker extends SignalWatcher(LitElement) {
+  static get styles() {
+    return css`
+      :host > div {
+        color: var(--primary);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.8rem;
+        border-top: 1px solid var(--subdued);
+        border-opacity: 0.4;
+      }
+    `;
+  }
   static properties = {
     name: { type: String },
     gold: { type: Number },
@@ -45,7 +57,7 @@ class GoldMaker extends SignalWatcher(LitElement) {
     let gold = this.calculatedGold()
     return html`
       <div>
-      <span>${this.name}</span> <em>(x${this.multiplier})</em> ${gold} <button @click=${this.redistribute} ?disabled=${this.gold === 0}>redistribute</button>
+        <span>${this.name}</span> <em>(x${this.multiplier})</em> <div>$${gold} &nbsp;<button @click=${this.redistribute} ?disabled=${this.gold === 0}>$redistribute</button></div> 
       </div>
     `;
   }
@@ -59,7 +71,7 @@ function computeTotalGold() {
   document.querySelectorAll('gold-maker').forEach(el => {
     total += el.calculatedGold();
   });
-  document.querySelector('#gold-total').textContent = total;
+  document.querySelector('#gold-total').textContent = "$" + total;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

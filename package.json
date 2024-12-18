@@ -9,6 +9,7 @@
   "author": "rowinf",
   "license": "MIT",
   "dependencies": {
+    "@lit-labs/signals": "^0.1.1",
     "lit": "^3.2.1",
     "photoswipe": "^5.4.4"
   }

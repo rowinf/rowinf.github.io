@@ -1,3 +1,26 @@
 {{ with resources.Get "js/main.js" | js.Build }}
-    <script src="{{ .RelPermalink }}" type="module"></script>
+<script src="{{ .RelPermalink }}" type="module"></script>
 {{ end }}
+
+{{ $ttf := resources.Get "webfonts/fa-solid-900.ttf" }}
+{{ $woff := resources.Get "webfonts/fa-solid-900.woff2" }}
+<style>
+  :host,
+  :root {
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free"
+  }
+
+  @font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("{{ $woff.RelPermalink }}") format("woff2"), url("{{ $ttf.RelPermalink }}") format("truetype")
+  }
+
+  .fa-solid,
+  .fas {
+    font-weight: 900
+  }
+</style>

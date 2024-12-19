@@ -18,10 +18,10 @@ params:
   description: The web developer that will keep you out of trouble and your head on your shoulders
   profileMode:
     enabled: true
-    title: "Frontier Web Developer"
+    title: "Web/Mobile Developer"
     subtitle: "Slow is smooth and smooth is fast. We already tried complex, why not try simple?"
     imageUrl: "profile.jpg"
-    imageTitle: "my face"
+    imageTitle: "A picture of my face"
     imageWidth: 201
     imageHeight: 201
     buttons:

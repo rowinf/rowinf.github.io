@@ -1,16 +1,8 @@
 ---
 date: "2024-07-23T01:30:00Z"
-title: How should we think about frameworks?
-draft: true
+title: Frameworks are friends!
+draft: false
 ---
-
-Over the past decade and beyond, web frameworks have dominated the discussion around web development trends. With any luck, this trend is nearing its end. While frameworks can simplify web development and promote best practices, they also introduce significant challenges. Are they _merely_ troublesome, or should we go a step further and say that some are actually evil?
-
-Simplicity is a subjective ideal. Some drivers prefer stick shift, while others prefer automatic transmissions depending on their driving habits.
-
-I see simplicity as a middle ground between complexity and abstraction. Complexity is obviously bad, and we all know complexity when we see it. The painfully bad experience of driving through heavy traffic in a stick shift car is a reason why most people choose automatic.
-
-However, when venturing too far into the abstract, something more insidious happens. In terms of web frameworks, developers risk becoming enamored with their own ideas, ignoring the costs, speeding past the signs that they've gone too far.
 
 An "evil" framework might look something like this:
 
@@ -24,6 +16,6 @@ The evil framework would frequently reinvent itself to maintain market dominance
 
 The evil framework might have a tribe of committed evangelists, who depend on the success of their framework to find work.
 
-The evil framework's efficacy claims are difficult to substantiate, but once adopted, the cost of switching to something else is high.
+The evil framework's efficacy claims are difficult to substantiate, but once adopted, the cost of switching to something else is too high. Reasoning here being that we've invested too much into it, and we don't have time to switch to anything else.
 
-While not all frameworks are evil, and no actual evil people need be involved, it's important to note what evil frameworks do to the web. We should be more discerning in our adoption of technologies, and strive for a web we want to be part of. Evil frameworks triumph when good developers do nothing.
+This can happen without anyone's explicit intent. There is actually an essay on how worse software tends to dominate the market. [The Rise of Worse is Better](https://www.dreamsongs.com/RiseOfWorseIsBetter.html)

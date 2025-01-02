@@ -1,6 +1,9 @@
 
-{{- with .Params.gallery -}}
+{{ with .Params.gallery }}
     {{ with resources.Get "js/lightbox.js" | js.Build (dict "minify" false) }}
         <script src="{{ .RelPermalink }}" type="module"></script>
     {{ end }}
-{{- end -}}
+{{ end }}
+
+<script data-goatcounter="https://rowinfgithubio.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>

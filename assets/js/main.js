@@ -9,8 +9,22 @@ class CountIncrementer extends SignalWatcher(LitElement) {
       <button @click=${this.increment}>Go out and make money: ${watch(count)}</button>
     `;
   }
+  connectedCallback() {
+    super.connectedCallback();
+    this.updateGold();
+  }
+  updateGold() {
+    let total = 0;
+    document.querySelectorAll('gold-maker').forEach(el => {
+      let gold = el.gold + 100 * count.get() * el.multiplier;
+      el.gold = gold;
+      total += gold;
+    });
+    document.querySelector('gold-total').total = total;
+  }
   increment() {
     count.set(count.get() + 1);
+    this.updateGold();
   }
 }
 
@@ -32,16 +46,13 @@ class GoldMaker extends SignalWatcher(LitElement) {
     gold: { type: Number },
     multiplier: { type: Number }
   };
-  calculatedGold() {
-    return this.gold + 100 * count.get() * this.multiplier;
-  }
   redistribute() {
-    let redistributing = this.calculatedGold()
+    let redistributing = this.gold;
     let servants = document.getElementsByTagName('gold-maker');
     let highestGold = -Infinity;
     let highestServant = null;
     for (let servant of servants) {
-      let gold = servant.calculatedGold();
+      let gold = servant.gold;
       if (servant != this && gold > highestGold) {
         highestGold = gold;
         highestServant = servant;
@@ -54,32 +65,28 @@ class GoldMaker extends SignalWatcher(LitElement) {
     }
   }
   render() {
-    let gold = this.calculatedGold()
     return html`
       <div>
-        <span>${this.name}</span> <em>(x${this.multiplier})</em> <div>$${gold} &nbsp;<button @click=${this.redistribute} ?disabled=${this.gold === 0}>$redistribute</button></div> 
+        <span>${this.name}</span> <em>(x${this.multiplier})</em> <div>$${this.gold} &nbsp;<button @click=${this.redistribute} ?disabled=${this.gold === 0}>$redistribute</button></div> 
       </div>
     `;
   }
 }
 
-customElements.define('gold-maker', GoldMaker);
-customElements.define('count-incrementer', CountIncrementer);
 
-function computeTotalGold() {
-  let total = 0;
-  document.querySelectorAll('gold-maker').forEach(el => {
-    total += el.calculatedGold();
-  });
-  document.querySelector('#gold-total').textContent = "$" + total;
+class GoldTotal extends SignalWatcher(LitElement) {
+  static properties = {
+    total: { type: Number },
+  }
+  render() {
+    return html`
+      <strong>
+        ${this.total}
+      </strong>
+    `;
+  }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  computeTotalGold();
-});
-
-document.addEventListener('click', (event) => {
-  if (event.target.tagName === 'COUNT-INCREMENTER' || event.target.tagName === 'GOLD-MAKER') {
-    computeTotalGold();
-  }
-});
+customElements.define('gold-total', GoldTotal);
+customElements.define('gold-maker', GoldMaker);
+customElements.define('count-incrementer', CountIncrementer);

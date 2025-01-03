@@ -20,7 +20,7 @@ class CountIncrementer extends SignalWatcher(LitElement) {
       el.gold = gold;
       total += gold;
     });
-    document.querySelector('gold-total').total = total;
+    document.getElementById('gold-total').textContent = total;
   }
   increment() {
     count.set(count.get() + 1);
@@ -73,20 +73,5 @@ class GoldMaker extends SignalWatcher(LitElement) {
   }
 }
 
-
-class GoldTotal extends SignalWatcher(LitElement) {
-  static properties = {
-    total: { type: Number },
-  }
-  render() {
-    return html`
-      <strong>
-        ${this.total}
-      </strong>
-    `;
-  }
-}
-
-customElements.define('gold-total', GoldTotal);
 customElements.define('gold-maker', GoldMaker);
 customElements.define('count-incrementer', CountIncrementer);

@@ -20,3 +20,6 @@
     font-weight: 900
   }
 </style>
+{{ with resources.Get "vendor/htmx.min.js" }}
+<script src="{{ .RelPermalink }}"></script>
+{{ end }}

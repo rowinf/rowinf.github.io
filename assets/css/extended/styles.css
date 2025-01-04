@@ -66,3 +66,12 @@ gold-maker {
 gold-maker > * {
     width: 300px;
 }
+
+main {
+  transition: opacity 200ms ease-in;
+}
+
+main.htmx-added {
+  opacity: 0;
+}
+

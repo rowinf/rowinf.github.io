@@ -5,12 +5,14 @@
     --gap: 0.9rem;
     --theme: rgb(232, 232, 244);
     --subdued: #90aeba;
+    --info: steelblue;
 }
 
 .dark {
     --theme: rgb(20, 19, 19);
     --primary: #ccf1ff;
     --subdued: #64757c;
+    --info: cornflowerblue;
 }
 
 body,
@@ -75,3 +77,10 @@ main.htmx-added {
   opacity: 0;
 }
 
+aside {
+    padding: var(--gap);
+    border: 1px solid var(--info);
+    margin-bottom: var(--gap);
+    border-radius: var(--radius);
+    color: var(--info);
+}

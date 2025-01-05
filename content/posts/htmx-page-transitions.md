@@ -12,14 +12,19 @@ One way of getting around this page navigation issue has been to write a single 
 
 Another popular solution is to change the behavior of links to asynchronously fetch the next page, updating the document `<body>` content without a full page load. This makes page navigation much faster. I'm going to use htmx to achieve that behavior for this blog. This solution can be done in just a few lines of code. Some [helpful blog posts](https://brandonrozek.com/blog/progressive-enhancement-page-transitions-hugo-htmx/) have been written about it, but this post is about how I did it for this blog.
 
+{{< aside >}}
+Earlier libraries that pioneered this kind of page navigation include pjax and turbolinks, so it's still common to refer to this navigation technique as *pjax-style* or *turbolinks* navigation.
+{{< /aside >}}
+
 I chose htmx as a solution because it is a small JavaScript library that enhances any website with SPA-like behavior. The [boosting](https://htmx.org/docs/#boosting) feature of htmx globally enables asynchronous requesting of body content. A great feature of the boost feature is that it "degrades gracefully", like how an escalator becomes stairs, if something goes wrong in the user's browser. I find htmx attributes easy to use and its conventions easy to follow.
 
 ## Customize Hugo Theme
 
-In Hugo, when you want to customize your theme, you usually need to find the part of the theme you want to customize. You then copy that file into your `layouts` directory. Then add your customizations to the copied file. Hugo has a lookup order to layout files so your copied file will receive higher priority in the load order.
+In Hugo, when you want to customize a theme, first find the part of the theme you want to customize. Copy that file into your project directory *with the same path*. Then add your customizations to the copied file. Hugo has a [lookup order](https://gohugo.io/templates/lookup-order/) to layout files so the copied file will be used when the layout file is invoked by the theme as long as the path matches.
 
 It's nice that I can make a small change to a small file with exactly what I need to add global boosting. The layout file I'm customizing for [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) is named `baseof.html` and it looks like this once I add `hx-boost` to it:
 ```go
+// layouts/_default/baseof.html
 <body class="
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
 {{- print "list" -}}
@@ -53,7 +58,7 @@ main.htmx-added {
 }
 ```
 
-When the main tag is swapped in by htmx, it enters the dom with `.htmx-added` class that is quickly removed.
+When the main tag is swapped in by htmx, it enters the DOM with `.htmx-added` class that is quickly removed.
 
 ## Hold Up
 That should be it, right? Well, there is a problem with my theme. It adds a script for the "scroll to top" functionality. I see a strange error in Chrome:
@@ -100,9 +105,26 @@ window.onscroll = function () {
 
 Our script crashes when using `let` to redeclare a `window` scoped variable. Remember that any variable declared in a `<script></script>` tag is automatically scoped to the `window`. A little gotcha when using this page navigation technique is that the `window` still has the same variables we declared in the last page!
 
+{{< aside >}}
+**Gotcha**: Since *only* the body content changes between pages, any variables declared in the `window` scope from the previous page are still there.
+{{< /aside >}}
+
 In a normal page transition, this is not a problem, but in our case, the `menu` variable is already in the window scope and is being redeclared with `let` on every page navigation.
 
 Moreover, `var` simply allows you to redeclare it in the same scope, but `let` is stricter and will throw an error if you try to redeclare it in the [same scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations)! To fix this I simply copy the `footer.html` from my theme and fix the offending script.
+
+```HTML
+<script>
+var menu = document.getElementById('menu') // no error!
+if (menu) {
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+}
+</script>
+```
+By changing the `let` to `var` we keep the code simple and avoid errors. Sometimes the simplest fix is the best one.
 
 ## Conclusion
 

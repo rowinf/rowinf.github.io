@@ -126,6 +126,10 @@ if (menu) {
 ```
 By changing the `let` to `var` we keep the code simple and avoid errors. Sometimes the simplest fix is the best one.
 
+```JS
+var menu = document.getElementById('menu') // no more error
+```
+
 ## Conclusion
 
 That's it! My blog gets a little UX boost with the slick page transition, and feels a little bit faster. An important difference between `let` and `var` was revealed in the process.

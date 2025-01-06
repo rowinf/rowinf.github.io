@@ -20,19 +20,11 @@ I chose htmx as a solution because it is a small JavaScript library that enhance
 
 ## Customize Hugo Theme
 
-In Hugo, when you want to customize a theme, first find the part of the theme you want to customize. Copy that file into your project directory *with the same path*. Then add your customizations to the copied file. Hugo has a [lookup order](https://gohugo.io/templates/lookup-order/) to layout files so the copied file will be used when the layout file is invoked by the theme as long as the path matches.
+Hugo uses a [lookup order](https://gohugo.io/templates/lookup-order/) to determine which layout files to render. In my project I copied the layout from the theme, to my layouts folder, preserving the path, so Hugo will use it instead of rendering the theme's original layout file.
 
-It's nice that I can make a small change to a small file with exactly what I need to add global boosting. The layout file I'm customizing for [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) is named `baseof.html` and it looks like this once I add `hx-boost` to it:
+I added global boosting to `baseof.html` from my the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme. It looks like this once I add `hx-boost` to it:
 ```go
-// layouts/_default/baseof.html
-<body class="
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print "list" -}}
-{{- end -}}
-{{- if eq site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
-{{- end -}}
-" id="top"
+<body class="... theme ..." id="top"
 hx-boost="true"
 >
     {{- partialCached "header.html" . .Page -}}

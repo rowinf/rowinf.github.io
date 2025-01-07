@@ -44,7 +44,7 @@ This partial `layout/partials/extend_head.html` is automatically included by the
 Hugo uses a [lookup order](https://gohugo.io/templates/lookup-order/) to determine which layout files to render. In my project I copied the layout from the theme to my layouts folder, preserving the path, so Hugo will use it instead of rendering the theme's original layout file.
 
 I added global boosting to `baseof.html` from the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme. It looks like this once I add `hx-boost` to it:
-```go
+```go {linenos=true,hl_lines=[2]}
 <body class="... theme ..." id="top"
 hx-boost="true"
 >
@@ -88,7 +88,7 @@ Uncaught SyntaxError: redeclaration of let menu
 ```
 
 The error occurs in a script my theme PaperMod adds to the page in the body tag:
-```HTML
+```HTML {linenos=true,hl_lines=[2]}
 <script>
 let menu = document.getElementById('menu') // ERROR
 if (menu) {
@@ -101,7 +101,7 @@ if (menu) {
 ```
 Mysteriously, another script further down the theme's code doesn't throw an error:
 
-```HTML
+```HTML {linenos=true,hl_lines=[2]}
 <script>
 var mybutton = document.getElementById("top-link"); // NO ERROR??
 window.onscroll = function () {
@@ -128,7 +128,7 @@ In a normal page transition, this is not a problem, but in our case, the `menu` 
 
 Moreover, `var` simply allows you to redeclare it in the same scope, but `let` is stricter and will throw an error if you try to redeclare it in the [same scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations)! To fix this I simply copy the `footer.html` from my theme and fix the offending script.
 
-```HTML
+```HTML {linenos=true,hl_lines=[2]}
 <script>
 var menu = document.getElementById('menu') // no error!
 if (menu) {
@@ -140,10 +140,6 @@ if (menu) {
 </script>
 ```
 By changing the `let` to `var` we keep the code simple and avoid errors. Sometimes the simplest fix is the best one.
-
-```JS
-var menu = document.getElementById('menu') // no more error
-```
 
 ## Conclusion
 

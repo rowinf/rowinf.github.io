@@ -2,6 +2,7 @@ baseURL: https://rowinf.github.io
 disablePathToLower: true
 theme: PaperMod
 title: Robert Irwin
+enableEmoji: true
 menus:
   main:
     - name: Minis

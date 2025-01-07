@@ -6,6 +6,8 @@
     --theme: rgb(232, 232, 244);
     --subdued: #90aeba;
     --info: steelblue;
+    --grad-step-1: rgba(0,212,255,1);
+    --grad-step-2: rgba(9,9,121,1);
 }
 
 .dark {
@@ -13,6 +15,8 @@
     --primary: #ccf1ff;
     --subdued: #64757c;
     --info: cornflowerblue;
+    --grad-step-1: rgba(9,9,121,1);
+    --grad-step-2: rgba(0,212,255,1);
 }
 
 body,
@@ -88,4 +92,11 @@ aside {
     margin-bottom: var(--gap);
     border-radius: var(--radius);
     color: var(--info);
+}
+
+.footer-gradient {
+    margin-top: calc(var(--gap) * 4);
+    height: 150px;
+    background: var(--theme);
+    background: linear-gradient(180deg, var(--theme) 0%, var(--grad-step-1) 35%, var(--grad-step-2) 100%);
 }

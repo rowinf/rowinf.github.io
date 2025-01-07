@@ -20,9 +20,30 @@ I chose htmx as a solution because it is a small JavaScript library that enhance
 
 ## Customize Hugo Theme
 
-Hugo uses a [lookup order](https://gohugo.io/templates/lookup-order/) to determine which layout files to render. In my project I copied the layout from the theme, to my layouts folder, preserving the path, so Hugo will use it instead of rendering the theme's original layout file.
+I'm using the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme for my developer blog, so the steps to customize it are somewhat specific to this theme.
 
-I added global boosting to `baseof.html` from my the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme. It looks like this once I add `hx-boost` to it:
+### Add htmx
+
+The first step is to add htmx to the website's `<head>` section. I ran this command:
+
+```
+curl https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js > assets/vendor/htmx.min.js
+```
+
+This partial `layout/partials/extend_head.html` is automatically included by the theme in the `<head>` during the build process.
+
+```go
+// layouts/partials/extend_head.html
+{{ with resources.Get "vendor/htmx.min.js" }}
+<script src="{{ .RelPermalink }}"></script>
+{{ end }}
+```
+
+### Edit the base template
+
+Hugo uses a [lookup order](https://gohugo.io/templates/lookup-order/) to determine which layout files to render. In my project I copied the layout from the theme to my layouts folder, preserving the path, so Hugo will use it instead of rendering the theme's original layout file.
+
+I added global boosting to `baseof.html` from the [PaperMod](https://adityatelange.github.io/hugo-PaperMod/) theme. It looks like this once I add `hx-boost` to it:
 ```go
 <body class="... theme ..." id="top"
 hx-boost="true"
@@ -34,6 +55,8 @@ hx-boost="true"
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 </body>
 ```
+
+### Add the page transition with CSS
 
 The boosted links will now "swap" asynchronously fetched content into the body. During the [swap process](https://htmx.org/attributes/hx-swap/), htmx adds and removes [CSS classes](https://htmx.org/reference/#classes) that we can use to add some animations.
 

@@ -69,6 +69,11 @@ gold-maker > * {
     width: 300px;
 }
 
+main:has(a.htmx-request),
+header:has(a.htmx-request) + main {
+    opacity: 0.5;
+}
+
 main {
   transition: opacity 200ms ease-in;
 }

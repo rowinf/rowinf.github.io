@@ -5,16 +5,23 @@ title: Robert Irwin
 enableEmoji: true
 menus:
   main:
+    - name: Posts
+      url: "/posts/"
+      weight: 10
     - name: Minis
       url: "/minis/"
+      weight: 20
     - name: Archives
       url: "/archives/"
+      weight: 30
 params:
+  # env: production
+  images:
+    - Social_Preview.png
   footer:
     text: Slow is smooth, smooth is fast
   assets:
     favicon: favicon.ico
-    disableHLJS: true
   defaultTheme: auto
   languageCode: en-us
   description: The web developer that will keep you out of trouble and your head on your shoulders

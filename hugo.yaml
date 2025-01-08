@@ -47,3 +47,7 @@ params:
 markup:
   highlight:
     noClasses: false
+  goldmark:
+    parser:
+      attribute:
+        block: true

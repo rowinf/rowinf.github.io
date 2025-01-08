@@ -2,7 +2,7 @@
 date = '2025-01-08T13:04:21+13:00'
 draft = false
 title = 'Choosing Hugo'
-description = 'Choosing Hugo: A Developer's Journey to Self-Hosting a Blog'
+description = "Choosing Hugo: A Developer's Journey to Self-Hosting a Blog"
 showtoc = true
 ShowBreadCrumbs = true
 tags = ['hugo']

@@ -1,23 +1,3 @@
-:root {
-    --body-font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-    --code-bg: rgb(244, 244, 244);
-    --primary: rgb(0, 15, 62);
-    --gap: 0.9rem;
-    --theme: rgb(232, 232, 244);
-    --subdued: #90aeba;
-    --info: steelblue;
-    --grad-step-1: rgba(0,212,255,1);
-    --grad-step-2: rgba(9,9,121,1);
-}
-
-.dark {
-    --theme: rgb(20, 19, 19);
-    --primary: #ccf1ff;
-    --subdued: #64757c;
-    --info: cornflowerblue;
-    --grad-step-1: rgba(9,9,121,1);
-    --grad-step-2: rgba(0,212,255,1);
-}
 
 body,
 h1,
@@ -99,4 +79,43 @@ aside {
     height: 150px;
     background: var(--theme);
     background: linear-gradient(180deg, var(--theme) 0%, var(--grad-step-1) 35%, var(--grad-step-2) 100%);
+}
+
+.info {
+    color: var(--info);
+}
+
+.success {
+    color: var(--success);
+}
+
+.goat {
+    font-size: 14px;
+}
+
+footer:last-of-type {
+    position: relative;
+    height: 100px;
+}
+
+/* https://www.shapedivider.app/ */
+.custom-shape-divider-bottom-1736301286 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1736301286 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 83px;
+}
+
+.custom-shape-divider-bottom-1736301286 .shape-fill {
+    fill: var(--secondary);
 }

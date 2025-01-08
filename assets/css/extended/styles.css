@@ -74,13 +74,6 @@ aside {
     color: var(--info);
 }
 
-.footer-gradient {
-    margin-top: calc(var(--gap) * 4);
-    height: 150px;
-    background: var(--theme);
-    background: linear-gradient(180deg, var(--theme) 0%, var(--grad-step-1) 35%, var(--grad-step-2) 100%);
-}
-
 .info {
     color: var(--info);
 }
@@ -99,7 +92,7 @@ footer:last-of-type {
 }
 
 /* https://www.shapedivider.app/ */
-.custom-shape-divider-bottom-1736301286 {
+.custom-shape-divider-bottom-1736302334 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -109,13 +102,13 @@ footer:last-of-type {
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1736301286 svg {
+.custom-shape-divider-bottom-1736302334 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 83px;
+    height: 90px;
 }
 
-.custom-shape-divider-bottom-1736301286 .shape-fill {
-    fill: var(--secondary);
+.custom-shape-divider-bottom-1736302334 .shape-fill {
+    fill: var(--subdued);
 }

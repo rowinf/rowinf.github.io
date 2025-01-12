@@ -12,11 +12,15 @@ One way of getting around this page navigation issue has been to write a single 
 
 Another popular solution is to change the behavior of links to asynchronously fetch the next page, updating the document `<body>` content without a full page load. This makes page navigation much faster. I'm going to use htmx to achieve that behavior for this blog. This solution can be done in just a few lines of code. Some [helpful blog posts](https://brandonrozek.com/blog/progressive-enhancement-page-transitions-hugo-htmx/) have been written about it, but this post is about how I did it for this blog.
 
+I chose htmx as a solution because it is a small JavaScript library that enhances any website with SPA-like behavior. The [boosting](https://htmx.org/docs/#boosting) feature of htmx globally enables asynchronous requesting of body content. A great feature of the boost feature is that it "degrades gracefully", like how an escalator becomes stairs, if something goes wrong in the user's browser. I find htmx attributes easy to use and its conventions easy to follow.
+
 {{< aside >}}
 Earlier libraries that pioneered this kind of page navigation include pjax and turbolinks, so it's still common to refer to this navigation technique as *pjax-style* or *turbolinks* navigation.
-{{< /aside >}}
 
-I chose htmx as a solution because it is a small JavaScript library that enhances any website with SPA-like behavior. The [boosting](https://htmx.org/docs/#boosting) feature of htmx globally enables asynchronous requesting of body content. A great feature of the boost feature is that it "degrades gracefully", like how an escalator becomes stairs, if something goes wrong in the user's browser. I find htmx attributes easy to use and its conventions easy to follow.
+This practice comes with a very important caveat that it's common for `<script>` tags to be written in the body of a static website.
+
+Scripts in the body content are rerun whenever the user navigates around the website while using this technique which may cause issues. Spoiler alert!
+{{< /aside >}}
 
 ## Customize Hugo Theme
 

@@ -47,19 +47,16 @@ In practice, the first steps might look something like this:
 2. [Create a website](https://gohugo.io/getting-started/quick-start/)
     - Install a theme
     - Add some content
-    -  Basic configuration
+    - Basic configuration
 3.  [Deploy to Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 
 
 Follow it up with questions about what to do next. If you don't have questions, write more content! Some ideas:
 - Tag your posts
 - Use some shortcodes in your content
 - Add a chart to your content
-- Configure social media OG meta tags
-- Add another content archetype
+- Configure social media [OG tags](https://ogp.me/)
 - Add a favicon
 - [Choose a different theme](https://themes.gohugo.io/)
-- Write a new shortcode
-- Add font awesome icons
 
 ## Developer Blog
 

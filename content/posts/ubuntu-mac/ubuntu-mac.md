@@ -26,7 +26,7 @@ One pain point with Ubuntu is that there is quite a bit of customizing to do to 
 
 Upgrading is good, but maybe not just right now. The longer I can wait, the better the upgrade will be. Just think of the awesome power computers will have after a couple more years of waiting.
 
-My Mac book was top of the line when I got it in 2016. Most software doesn't need more than 16gb RAM and 512gb of storage. I had a replacement battery installed as part of some other maintenance right at the end of its warranty, and I got a new charger too. The truth is, this computer works well enough and the parts have already been replaced. There's no pressing need to upgrade.
+My Mac book was top of the line when I got it. Most software doesn't need more than 16gb RAM and 512gb of storage. I had a replacement battery installed as part of some other maintenance at the end of its warranty, and I got a new charger too. This computer works well enough and the parts have already been replaced. There's currently no pressing need to upgrade to a faster or more storage intensive computer.
 
 Prior to attempting this, I had Ubuntu on my Windows gaming desktop. I have no time for games anymore, and I have trouble putting a game down once I pick it up. I already knew that I could use Ubuntu for my developer work. Once Omakub was released last year, I knew Ubuntu could be a great developer machine with very little set up time.
 

@@ -3,7 +3,6 @@ date = '2025-02-18T09:53:04+13:00'
 draft = false
 title = 'New life for old Mac book pro'
 +++
-# New life for an old Mac book pro
 
 I installed Ubuntu Linux and Omakub on my old Mac from 2015
 

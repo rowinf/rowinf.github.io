@@ -15,6 +15,14 @@ p {
     background-color: var(--tertiary);
 }
 
+.entry-cover {
+  height: 250px;
+}
+
+.entry-cover img {
+  object-fit: cover;
+}
+
 figure {
     display: flex;
     flex-direction: row;

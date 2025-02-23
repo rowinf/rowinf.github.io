@@ -34,15 +34,15 @@ Prior to attempting this, I had Ubuntu on my Windows gaming desktop. I have no t
 
 I ran into a graphics issue in the installer where large parts of the screen turned white. Searching the webs for an answer suggested changing some kernel settings, but I did not do these things. First, I tried starting the installer in graphics safe-mode and that got me through the installation process. Installing went off without a problem.
 
-After installation was complete, I installed Omakub. Again, large parts of the screen would turn white and I couldn't see what some windows were displaying. Reinstalling Ubuntu and Omakub resolved this! Ubuntu now works on my laptop, and it's **nice**. 
+After installation was complete, I installed Omakub. Again, large parts of the screen would turn white and I couldn't see what some windows were displaying. Reinstalling Ubuntu and Omakub resolved this! The white screen issue came back and went away during a system upgrade. It doesn't seem to be a big problem that needs any fixing on my end. I'm keeping an eye on it. Overall stability and usability is not impacted. Ubuntu now works on my laptop, and it's **nice**. 
 
-Ubuntu itself is great for developers. Omakub takes care of a lot of the setup and installation of software. Snaps are getting better all the time. The process of installing software remains my biggest complaint in Ubuntu. Switching between snap, apt, or adding a ppa to install what I need is not fun.
+Ubuntu itself is great for developers. Omakub takes care of a lot of the setup and installation of software. I'm noticing snaps are getting better. The Hugo I installed to produce this website was installed as a Snap package. However, The process of installing software remains my biggest complaint in Ubuntu. Switching between snap, apt, or adding a ppa to install what I need is not fun. However, once a package is installed, updates are automatically grabbed from the proper source. That is to say it's not a big issue that ruins it for me.
 
 ## Will it last?
 
 WILL I BREAK DOWN AND GET A NEW MAC? Maybe one day, but not today. Tomorrows computers could be very different, the stars just aren't aligned, maybe Mercury is in retrograde.
 
-I'm happy this computer has been with me for 10 years. I doubt it'll last another 10 years, but I will try anything to extend the life a little bit longer. The future could be radically different from the present. We might have repairable laptops that last 20+ years, or maybe we won't have laptops at all.
+I'm happy this computer has been with me for 10 years. In a disposable world, this little laptop has grown on me. I doubt it'll last another 10 years, but it's nice to extend the life a little bit longer. The future could be radically different from the present. We might have repairable laptops that last 20+ years, or maybe we won't have laptops at all!
 
 ## Conclusion
 

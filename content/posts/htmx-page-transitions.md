@@ -15,11 +15,7 @@ Another popular solution is to change the behavior of links to asynchronously fe
 I chose htmx as a solution because it is a small JavaScript library that enhances any website with SPA-like behavior. The [boosting](https://htmx.org/docs/#boosting) feature of htmx globally enables asynchronous requesting of body content. A great feature of the boost feature is that it "degrades gracefully", like how an escalator becomes stairs, if something goes wrong in the user's browser. I find htmx attributes easy to use and its conventions easy to follow.
 
 {{< aside >}}
-Earlier libraries that pioneered this kind of page navigation include pjax and turbolinks, so it's still common to refer to this navigation technique as *pjax-style* or *turbolinks* navigation.
-
-This practice comes with a very important caveat that it's common for `<script>` tags to be written in the body of a static website.
-
-Scripts in the body content are rerun whenever the user navigates around the website while using this technique which may cause issues. Spoiler alert!
+**Info:** Earlier libraries that pioneered this kind of page navigation include pjax and turbolinks, so it's still common to refer to this navigation technique as *pjax-style* or *turbolinks* navigation.
 {{< /aside >}}
 
 ## Customize Hugo Theme

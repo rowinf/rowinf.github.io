@@ -15,7 +15,9 @@ menus:
       url: "/archives/"
       weight: 30
 params:
-  # env: production
+  mainSections:
+    - posts
+    - minis
   images:
     - Social_Preview.png
   footer:

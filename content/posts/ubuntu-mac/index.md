@@ -4,11 +4,7 @@ draft = false
 title = 'New life for old Mac book pro'
 tags = ['Linux']
 [cover]
-  responsiveImages = true
   image = 'posts/ubuntu-mac/macbook-ubuntu.webp'
-  # image = 'posts/ubuntu-mac/mac-ubuntu-og-image.jpg'
-  width = 1000
-  height = 250
   alt = 'A visually appealing digital illustration of an old MacBook Pro with a sleek Ubuntu desktop environment on the screen. The MacBook is placed on a wood'
 +++
 

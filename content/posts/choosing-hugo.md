@@ -83,7 +83,7 @@ You can add classes to your markdown text, but some configuration is required.
 {class="success"}
 
 #### Emojis
-:smile: Enable emojis :blueheart: configuration.
+:smile: Enable emojis :blue_heart: configuration.
 
 #### Diagrams
 

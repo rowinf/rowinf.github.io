@@ -11,12 +11,12 @@
     --content: rgb(31, 31, 31);
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
+    --border: rgb(223 222 227);
 
     --body-font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     --primary: rgb(0, 15, 62);
     --gap: 0.9rem;
-    --theme: rgb(215, 215, 229);
+    --theme: rgb(234, 234, 241);
     --subdued: #90aeba;
     --info: steelblue;
     --success: springgreen;
@@ -40,10 +40,6 @@
     --info: cornflowerblue;
     --grad-step-1: rgba(9,9,121,1);
     --grad-step-2: rgba(0,212,255,1);
-}
-
-.list {
-    background: var(--code-bg);
 }
 
 .dark.list {

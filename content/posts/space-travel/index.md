@@ -18,6 +18,6 @@ As a web developer, it's an individual responsibility to make sure your skills a
 
 I built it using [Hugo](https://gohugo.io/), Sass, and a small JavaScript library called [surreal](https://github.com/gnat/surreal). Hugo comes prebuilt with Sass in the snap package binary, so switching from vanilla CSS to Sass here was quite easy. I definitely think Hugo should see more use, given the amount of utilities built in. Surreal lets you write js inline with your html in `<script>` tags, saving you the effort of managing js in some other file. I highly recommend it for adding a bit of js to a static website. It works great with Hugo!
 
-Having access to the detailed figma designs and video series saved me a lot of decision fatigue. I know that the thing I built aligns with current trends in web development. Furthermore, having the expert commentary provides a lot of background knowledge as well. I've already started the next challenge without a video series. Here is a link to the finished product, feel free to have a look!
+Having access to the detailed figma designs and video series saved me a lot of decision fatigue. I know that the thing I built aligns with current trends in web development. Furthermore, having the expert commentary provides a lot of background knowledge. Even though I do this for a living during the day, I generally don't Build A Thing entirely from start to finish. I've already started the next challenge without a video series. Here is a link to the finished product, feel free to have a look!
 
 https://rowinf.github.io/space-travel/

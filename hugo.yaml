@@ -30,7 +30,7 @@ params:
   profileMode:
     enabled: true
     title: "Web/Mobile Developer"
-    subtitle: "Slow is smooth and smooth is fast. We already tried complex, why not try simple?"
+    subtitle: "Slow is smooth and smooth is fast."
     imageUrl: "profile.jpg"
     imageTitle: "A picture of my face"
     imageWidth: 201

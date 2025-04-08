@@ -20,6 +20,7 @@ params:
     - minis
   images:
     - Social_Preview.png
+    - Social_Preview_dark.png
   footer:
     text: Slow is smooth, smooth is fast
   assets:
@@ -29,12 +30,12 @@ params:
   description: The web developer that will keep you out of trouble and your head on your shoulders
   profileMode:
     enabled: true
-    title: "Web/Mobile Developer"
+    title: "Web Developer"
     subtitle: "Slow is smooth and smooth is fast."
     imageUrl: "profile.jpg"
     imageTitle: "A picture of my face"
-    imageWidth: 201
-    imageHeight: 201
+    imageWidth: 250
+    imageHeight: 250
     buttons:
       - name: Archives
         url: "/archives/"

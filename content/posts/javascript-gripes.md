@@ -1,6 +1,6 @@
 +++
 date = '2025-04-24T21:11:36+12:00'
-draft = true
+draft = false
 title = 'My take on the state of JavaScript'
 +++
 

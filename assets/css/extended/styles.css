@@ -119,3 +119,7 @@ footer:last-of-type {
 .custom-shape-divider-bottom-1736302334 .shape-fill {
     fill: var(--subdued);
 }
+
+@view-transition {
+    navigation: auto;
+}

@@ -19,7 +19,7 @@
 " id="top"
 >
     {{- partialCached "header.html" . .Page -}}
-    <main class="main" hx-boost="true">
+    <main class="main" hx-boost="true" {{ if .Params.gallery }}id="gallery"{{ end }}>
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}

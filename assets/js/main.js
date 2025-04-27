@@ -1,5 +1,17 @@
 import { html, LitElement, css } from 'lit';
 import { SignalWatcher, watch, signal } from '@lit-labs/signals';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import Photoswipe from 'photoswipe';
+
+window.lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'figure>a',
+    pswpModule: Photoswipe,
+    initialZoomLevel: 1,
+    secondaryZoomLevel: 1.5,
+    maxZoomLevel: 2,
+    showHideAnimationType: 'zoom'
+});
 
 const count = signal(0);
 
@@ -67,7 +79,7 @@ class GoldMaker extends SignalWatcher(LitElement) {
   render() {
     return html`
       <div>
-        <span>${this.name}</span> <em>(x${this.multiplier})</em> <div>$${this.gold} &nbsp;<button @click=${this.redistribute} ?disabled=${this.gold === 0}>$redistribute</button></div> 
+        <span>${this.name}</span> <em>(x${this.multiplier})</em> <div>$${this.gold} &nbsp;<button @click=${this.redistribute} ?disabled=${this.gold === 0}>$redistribute</button></div>
       </div>
     `;
   }

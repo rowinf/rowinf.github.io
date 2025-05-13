@@ -1,7 +1,7 @@
 +++
 date = '2025-05-01T10:13:47+13:00'
-draft = true
-title = 'Trying Laravel'
+draft = false
+title = 'Laravel Livewire Notes'
 description = 'it has its quirks, but overall fun to work with'
 +++
 

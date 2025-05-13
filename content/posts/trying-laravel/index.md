@@ -5,14 +5,36 @@ title = 'Laravel Livewire Notes'
 description = 'it has its quirks, but overall fun to work with'
 +++
 
-After a long time as a JavaScript developer, I developed issues with React [noted here]({{< ref "posts/javascript-gripes" >}}). I'm giving Laravel Livewire a try here as a way to step outside of my world and learn another way of doing things with the [Note-taking web app](https://www.frontendmentor.io/challenges/note-taking-web-app-773r7bUfOG).
+After a long time as a JavaScript developer, I became disillusioned with React [noted here]({{< ref "posts/javascript-gripes" >}}). I'm looking for a well-designed full-stack framework. Next.js has made a mess of React, and React Server Components are a conceptual "bridge too far" for me. Building the [Note-taking web app](https://www.frontendmentor.io/challenges/note-taking-web-app-773r7bUfOG) with [Laravel](https://laravel.com/) / [Livewire](https://livewire.laravel.com/) was a big step outside of the JavaScript ecosystem.
 
-Recent updates to Laravel I found while undergoing this project:
-- New Livewire starter kits to go with Laravel 12
-- New VS Code extension for better code hints in Laravel
-- Laravel Cloud launched for optimized Laravel deployment
+## Laravel
 
-Overall Laravel is a fast path to production with a lively ecosystem and helpful documentation. As someone who has never used PHP before I found the fluid APIs easy to use.
+I chose Laravel because of its mature, cohesive ecosystem lacking in JavaScript. It comes bundled with a starter kit that gets your project off the ground quickly.
+
+### A Thriving Ecosystem
+
+I found that Laravel has a thriving ecosystem full of updates. Some updates to Laravel I saw while undergoing this project:
+- The new Livewire starter kit from Laravel 12 got this project started fast.
+- A new VS Code extension helped me navigate my Laravel code base.
+- Laravel Cloud offers a fast path to production, though I ultimately used [fly.io](https://fly.io)
+
+### Laravel Utilities
+
+The batteries included approach taken by Laravel ensures you can get far before scrounging github for packages, vetting them for star count and compatibility. These utilities generally come with a [Facade or a simpler fluid syntax](https://laravel.com/docs/12.x/facades).
+
+## Livewire
+
+While a front-end framework like React might seem like the obvious choice for this project, my main reasons for choosing Livewire:
+- Less Client side code
+- Skip JSON APIs, just return HTML
+- Progressive-enhancement is baked-in
+- No build steps or transpilation for the JavaScript bundle
+- Alpine.js handles fine-grained UX requirements
+
+Within Livewire, you get the choice of using a class/template syntax or a more concise [Volt](https://livewire.laravel.com/docs/volt) syntax.
+
+## Shipping Is Easy
+Overall Laravel is a fast path to production with a lively ecosystem and helpful documentation. You have multiple deployment providers like laravel cloud, fly.io, and others.
 
 ## Technologies Used
 - Laravel
@@ -23,11 +45,9 @@ Overall Laravel is a fast path to production with a lively ecosystem and helpful
 - Amazon SES (email)
 - Sqlite
 
-Livewire integrates Laravel with Alpine.js via html attributes. It adds reactivity to server-rendered html without quite being a front end framework. Here are some code examples from the project.
-
 ## Highlights
 
-Here are the code highlights of some of the key functionality from the project.
+Below are some code examples from key parts of the app, showcasing how Laravel and Livewire simplify common UI patterns.
 
 ### Note List Navigation
 Here's a link that is used to navigate between notes. Laravel's Blade syntax is the `@if` and `@foreach` and `{{ $tag->id }}` and `@class` while the Livewire bits are as follows:
@@ -65,7 +85,7 @@ Here's a link that is used to navigate between notes. Laravel's Blade syntax is 
 ```
 
 ### Note Title
-Note Title uses cross-component communication with events to listen for updates to the note title. It uses the Volt syntax to contain itself in one file. Nesting components is something to avoid, but I had to here.
+Note Title uses cross-component communication with events to listen for updates to the note title. It uses the Volt syntax to contain itself in one file. Normally, nesting Livewire components is discouraged due to performance and complexity concerns—but in this case, it was the most practical solution.
 
 ```php
 <?php
@@ -89,7 +109,8 @@ new class extends Component {
 ```
 
 ### Global Toasts
-I wanted the toasts to remain on the page for example if a note gets deleted and the user redirects to another page. The `@persist` blade directive allows this component to persist across page navigation when using `wire:navigate` but only if the toast is at the root layout. It wasn't obvious what would work and what wouldn't. I used an Alpine store because the template was getting crowded. The starter kit provides a demo toast notification that uses a livewire directive `@this` that didn't seem to work as a global toast. That is, it would have to be colocated with the code that triggers it, and any route change wipes the toast off the screen.
+I wanted to be able to maintain user feedback across route changes, a common task in single-page apps, often bringing in a mess of dependencies. I have made an Alpine store to provide global state for the toasts. Here, the `@persist` blade directive ensures the toast component isn’t destroyed during `wire:navigate`, which gives it SPA-like persistence.
+
 ```html
 @persist('toast')
 <div x-cloak x-data="$store.toasts" class="h-9 absolute bottom-8 right-0 z-100 w-102"
@@ -107,9 +128,32 @@ I wanted the toasts to remain on the page for example if a note gets deleted and
 @endpersist
 ```
 
+So this global toast works in conjunction with a server round-trip for creating a note:
+```php
+$note = $this->form->save();
+$this->dispatch('note-added', id: $note->id, message: 'Note saved successfully!');
+$this->redirect(route('note.show', ['note' => $note]), navigate: true);
+```
+
+The php event is handled in the client with a Livewire hook to show the toast after the route change is complete:
+```JS
+document.addEventListener('livewire:navigated', () => {
+    const { deferOpen, message, toast } = Alpine.store('toasts');
+    if (deferOpen) {
+        toast(message);
+    }
+});
+Livewire.on('note-added', (event) => {
+    Alpine.store('toasts').deferToast(event.message);
+});
+```
+
+{{< aside >}}
+The starter kit provides a demo toast notification using a livewire directive "`@this`" that didn't seem to work as a global toast. Also, the paid version of Flux UI has a global toast utility. It's probably simpler than what I did here!
+{{ /aside }}
+
 ## Conclusion
 
-Livewire gives you lots of tools to craft the behavior of an application. It has its quirks, and it's easy to get lost trying to do something it just isn't meant to do. That said, it makes most things very easy.
-
+Livewire lets you craft the behavior of an application with as much or as little reactivity as you want. It's easy to veer off into patterns it isn't designed for. It's so simple that I'd even use it again on my next project.
 
 [Laravel Livewire Notes](https://www.frontendmentor.io/solutions/laravel-livewire-notes-85CwNRZkYZ) [github](https://github.com/rowinf/notes)

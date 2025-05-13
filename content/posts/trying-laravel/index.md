@@ -3,6 +3,7 @@ date = '2025-05-01T10:13:47+13:00'
 draft = false
 title = 'Laravel Livewire Notes'
 description = 'it has its quirks, but overall fun to work with'
+showtoc = true
 +++
 
 After a long time as a JavaScript developer, I became disillusioned with React [noted here]({{< ref "posts/javascript-gripes" >}}). I'm looking for a well-designed full-stack framework. Next.js has made a mess of React, and React Server Components are a conceptual "bridge too far" for me. Building the [Note-taking web app](https://www.frontendmentor.io/challenges/note-taking-web-app-773r7bUfOG) with [Laravel](https://laravel.com/) / [Livewire](https://livewire.laravel.com/) was a big step outside of the JavaScript ecosystem.
@@ -16,7 +17,7 @@ I chose Laravel because of its mature, cohesive ecosystem lacking in JavaScript.
 I found that Laravel has a thriving ecosystem full of updates. Some updates to Laravel I saw while undergoing this project:
 - The new Livewire starter kit from Laravel 12 got this project started fast.
 - A new VS Code extension helped me navigate my Laravel code base.
-- Laravel Cloud offers a fast path to production, though I ultimately used [fly.io](https://fly.io)
+- [Laravel Cloud](https://cloud.laravel.com/) offers a fast path to production, though I ultimately used [fly.io](https://fly.io)
 
 ### Laravel Utilities
 
@@ -31,7 +32,7 @@ While a front-end framework like React might seem like the obvious choice for th
 - No build steps or transpilation for the JavaScript bundle
 - Alpine.js handles fine-grained UX requirements
 
-Within Livewire, you get the choice of using a class/template syntax or a more concise [Volt](https://livewire.laravel.com/docs/volt) syntax.
+Within Livewire, you get the choice of using a class/template syntax that I used for this project, or a more concise [Volt](https://livewire.laravel.com/docs/volt) syntax.
 
 ## Shipping Is Easy
 Overall Laravel is a fast path to production with a lively ecosystem and helpful documentation. You have multiple deployment providers like laravel cloud, fly.io, and others.

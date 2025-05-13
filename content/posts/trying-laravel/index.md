@@ -20,6 +20,8 @@ Overall Laravel is a fast path to production with a lively ecosystem and helpful
 - Alpine.js (I knew this one already)
 - Flux UI
 - Tailwind CSS (I was a little familiar)
+- Amazon SES (email)
+- Sqlite
 
 Livewire integrates Laravel with Alpine.js via html attributes. It adds reactivity to server-rendered html without quite being a front end framework. Here are some code examples from the project.
 

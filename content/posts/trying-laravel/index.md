@@ -150,10 +150,12 @@ Livewire.on('note-added', (event) => {
 
 {{< aside >}}
 The starter kit provides a demo toast notification using a livewire directive "`@this`" that didn't seem to work as a global toast. Also, the paid version of Flux UI has a global toast utility. It's probably simpler than what I did here!
-{{ /aside }}
+{{< /aside >}}
 
 ## Conclusion
 
 Livewire lets you craft the behavior of an application with as much or as little reactivity as you want. It's easy to veer off into patterns it isn't designed for. It's so simple that I'd even use it again on my next project.
 
-[Laravel Livewire Notes](https://www.frontendmentor.io/solutions/laravel-livewire-notes-85CwNRZkYZ) [github](https://github.com/rowinf/notes)
+### References
+- [Front end mentor solution](https://www.frontendmentor.io/solutions/laravel-livewire-notes-85CwNRZkYZ)
+- [Project code](https://github.com/rowinf/notes)

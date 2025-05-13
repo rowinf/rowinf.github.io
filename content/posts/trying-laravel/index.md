@@ -1,8 +1,8 @@
 +++
 date = '2025-05-01T10:13:47+13:00'
 draft = false
-title = 'Laravel Livewire Notes'
-description = 'it has its quirks, but overall fun to work with'
+title = 'First Impressions of Laravel and Livewire'
+description = 'Still shaping up, but already a joy to work with'
 showtoc = true
 +++
 

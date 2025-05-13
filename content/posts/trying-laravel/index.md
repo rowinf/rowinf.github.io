@@ -109,8 +109,7 @@ I wanted the toasts to remain on the page for example if a note gets deleted and
 
 ## Conclusion
 
-Livewire gives you lots of tools to craft the behavior of an application. It has its quirks, and it's easy to get lost trying to do something it just isn't meant to do. All that said, once you get used to it, it's really easy to work with. I will try the Volt syntax on my next project, it looks even simpler.
+Livewire gives you lots of tools to craft the behavior of an application. It has its quirks, and it's easy to get lost trying to do something it just isn't meant to do. That said, it makes most things very easy.
 
-That's this project, now on to the next one.
 
 [Laravel Livewire Notes](https://www.frontendmentor.io/solutions/laravel-livewire-notes-85CwNRZkYZ) [github](https://github.com/rowinf/notes)

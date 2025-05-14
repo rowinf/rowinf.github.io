@@ -4,6 +4,9 @@ draft = false
 title = 'Notes on Laravel Livewire from a React Dev'
 description = 'Still taking shape, but productive and genuinely enjoyable to work with'
 showtoc = true
+[cover]
+  image = 'posts/trying-laravel/9twz43.jpg'
+  alt = 'Turning away from React to laravel'
 +++
 
 After a long time as a JavaScript developer, I became disillusioned with React [noted here]({{< ref "posts/javascript-gripes" >}}). I'm looking for a well-designed full-stack framework. Next.js has made a mess of React, and React Server Components are a conceptual "bridge too far" for me. Building the [Note-taking web app](https://www.frontendmentor.io/challenges/note-taking-web-app-773r7bUfOG) with [Laravel](https://laravel.com/) / [Livewire](https://livewire.laravel.com/) was a big step outside of the JavaScript ecosystem.

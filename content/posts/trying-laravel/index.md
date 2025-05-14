@@ -20,7 +20,7 @@ I chose Laravel because of its mature, cohesive ecosystem lacking in JavaScript.
 I found that Laravel has a thriving ecosystem full of updates. Some updates to Laravel I saw while undergoing this project:
 - The new Livewire starter kit from Laravel 12 got this project started fast.
 - A new VS Code extension helped me navigate my Laravel code base.
-- [Laravel Cloud](https://cloud.laravel.com/) offers a fast path to production, though I ultimately used [fly.io](https://fly.io)
+- [Laravel Cloud](https://cloud.laravel.com/) offers a fast path to production, though I ultimately used [fly.io](https://fly.io) because of a constraint in [frontendmentor.io](https://www.frontendmentor.io/)
 
 ### Laravel Utilities
 

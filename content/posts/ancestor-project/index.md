@@ -8,9 +8,11 @@ title = 'Ancestry Project (The Animus): Metamodernism in Code'
 
 ## What is Ancestry Project (The Animus)
 
+This post details Ancestry Project (The Animus) that uses Google's Gemini tools to create an interactive choose-your-own adventure that you can run as one of your own ancestors.
+
 Part fiction, part genealogy, part emotional technology — Ancestry Project is metamodernism in code.
 
-This post details Ancestry Project (The Animus) that uses Google's Gemini tools to create an interactive choose-your-own adventure that you can run as one of your own ancestors.
+It was inspired by a machine from the game series Assassin's Creed called The Animus that decodes memories in your DNA to provide an immersive virtual reality experience as one of your ancestors. In the game, you do this to solve present-day mysteries.
 
 Github Link: 
 
@@ -57,8 +59,6 @@ Part fiction, part genealogy, part emotional technology — Ancestry Project is 
 - [DataStar](https://data-star.dev/)
 
 ## Notes
-
-It was inspired by a machine from the game series Assassin's Creed called The Animus that decodes memories in your DNA to provide an immersive virtual reality experience as one of your ancestors. In the game, you do this to solve present-day mysteries.
 
 My reason for doing this is developing empathy for the past. Trying to imagine living an ancestor's life may help us feel less isolated from our past, and build connections in the present. There's [some research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3559433/) suggesting fiction can be a tool for developing empathy.
 
